@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "+IfXAgnINRKeRsZAv/qcSScwIyrzbTSiF3CtpF8S+Fw=",
+  "Source": "CarRentalService",
+  "BasePath": "_content/CarRentalService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CarRentalService\\wwwroot",
+      "Source": "CarRentalService",
+      "ContentRoot": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\",
+      "BasePath": "_content/CarRentalService",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\images\\Capture.PNG",
+      "SourceId": "CarRentalService",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\",
+      "BasePath": "_content/CarRentalService",
+      "RelativePath": "images/Capture.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Capture.PNG"
+    },
+    {
+      "Identity": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\images\\Mahindra Scorpio.jpg",
+      "SourceId": "CarRentalService",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\",
+      "BasePath": "_content/CarRentalService",
+      "RelativePath": "images/Mahindra Scorpio.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Mahindra Scorpio.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\images\\Toyota Camry.jpg",
+      "SourceId": "CarRentalService",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\",
+      "BasePath": "_content/CarRentalService",
+      "RelativePath": "images/Toyota Camry.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Toyota Camry.jpg"
+    }
+  ]
+}

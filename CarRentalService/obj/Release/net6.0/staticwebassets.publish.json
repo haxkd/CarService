@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "sgupKmiqtbOl99hU6At6Nl7K9Fhp03GtxE4Kyx07xnU=",
+  "Source": "CarRentalService",
+  "BasePath": "_content/CarRentalService",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CarRentalService\\wwwroot",
+      "Source": "CarRentalService",
+      "ContentRoot": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\",
+      "BasePath": "_content/CarRentalService",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\images\\Capture.PNG",
+      "SourceId": "CarRentalService",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\",
+      "BasePath": "_content/CarRentalService",
+      "RelativePath": "images/Capture.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Capture.PNG"
+    }
+  ]
+}
