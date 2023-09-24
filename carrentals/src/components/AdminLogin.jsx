@@ -72,7 +72,7 @@ const AdminLogin = () => {
                                 className="bg-primary h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn"
                                 data-wow-delay="0.6s"
                             >
-                                <h1 className="text-white mb-4"> -: User Login :- </h1>
+                                <h1 className="text-white mb-4"> -: Admin Login :- </h1>
 
                                 <div className="row g-3">
                                     <div className="col-12 ">
@@ -95,7 +95,6 @@ const AdminLogin = () => {
                                             style={{ height: "55px" }}
                                         />
                                     </div>
-
 
                                     <div className="col-12">
                                         <button

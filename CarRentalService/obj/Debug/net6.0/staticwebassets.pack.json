@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\images\\Capture.PNG"
     },
     {
+      "Id": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\images\\Ford Mustang - Ford.jpg",
+      "PackagePath": "staticwebassets\\images\\Ford Mustang - Ford.jpg"
+    },
+    {
       "Id": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\images\\Mahindra Scorpio.jpg",
       "PackagePath": "staticwebassets\\images\\Mahindra Scorpio.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\images\\Maruti Suzuki Swift.jpg",
+      "PackagePath": "staticwebassets\\images\\Maruti Suzuki Swift.jpg"
     },
     {
       "Id": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\images\\Toyota Camry.jpg",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+IfXAgnINRKeRsZAv/qcSScwIyrzbTSiF3CtpF8S+Fw=",
+  "Hash": "ml8ttFOTmMcqOu2Kq5m614+USgfqEWzIxXml1UaidsE=",
   "Source": "CarRentalService",
   "BasePath": "_content/CarRentalService",
   "Mode": "Default",
@@ -34,6 +34,23 @@
       "OriginalItemSpec": "wwwroot\\images\\Capture.PNG"
     },
     {
+      "Identity": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\images\\Ford Mustang - Ford.jpg",
+      "SourceId": "CarRentalService",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\",
+      "BasePath": "_content/CarRentalService",
+      "RelativePath": "images/Ford Mustang - Ford.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Ford Mustang - Ford.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\images\\Mahindra Scorpio.jpg",
       "SourceId": "CarRentalService",
       "SourceType": "Discovered",
@@ -49,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Mahindra Scorpio.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\images\\Maruti Suzuki Swift.jpg",
+      "SourceId": "CarRentalService",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\",
+      "BasePath": "_content/CarRentalService",
+      "RelativePath": "images/Maruti Suzuki Swift.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Maruti Suzuki Swift.jpg"
     },
     {
       "Identity": "C:\\Users\\Haxkd\\source\\repos\\CarService\\CarRentalService\\wwwroot\\images\\Toyota Camry.jpg",

@@ -88,7 +88,7 @@ const Navbar = () => {
                             </>)
                             }</>)}
                     </div>
-                    <Link to={'/admin'} className="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Admin<i className="fa fa-arrow-right ms-3"></i></Link>
+                    {localStorage.getItem("user") == null && <Link to={'/admin'} className="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Admin<i className="fa fa-arrow-right ms-3"></i></Link>}
                 </div>
             </nav>
 

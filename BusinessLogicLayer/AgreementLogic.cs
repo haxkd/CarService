@@ -105,7 +105,7 @@ namespace BusinessLogicLayer
                     }
                     if (agreement.status == "returned")
                     {
-                        updateQuantity(Convert.ToInt32(agreement.CarId), 1);
+                        updateQuantity(Convert.ToInt32(rental.RentCar), 1);
                     }
                 }
                 _context.SaveChanges();

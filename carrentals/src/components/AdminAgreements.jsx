@@ -26,7 +26,6 @@ const AdminAgreements = () => {
             })
             .then(function (response) {
                 setRental(response.data);
-                //console.log(response.data);
             })
             .catch(function (error) {
                 if (error.response.status == "401") {
@@ -133,6 +132,7 @@ const AdminAgreements = () => {
                             <tr>
                                 <th>#</th>
                                 <th>Car</th>
+                                <th>User</th>
                                 <th>Status</th>
                                 <th className="text-center">Action</th>
                             </tr>
@@ -146,25 +146,25 @@ const AdminAgreements = () => {
                                                 {index + 1}
                                             </td>
                                             <td>{value.rentCarNavigation && value.rentCarNavigation.carModel} - {value.rentCarNavigation && value.rentCarNavigation.carMaker}</td>
+                                            <td>{value.rentUserNavigation.userName}</td>
                                             <td>{value.rentStatus}</td>
-
                                             <td>
                                                 <div className="d-flex gap-3">
                                                     {value.rentStatus == "return" && <><button className="btn btn-outline-success" onClick={() => handleAccept(value.rentId)}>Accept</button></>}
 
-                                                    {calcDays(value.rentDate,value.rentDuration) && value.rentStatus == "rented" && <><button className="btn btn-outline-secondary" onClick={() => handleAccept(value.rentId)}>Cancel</button></>}
+                                                    {value.rentStatus == "rented" && <><button className="btn btn-outline-secondary" onClick={() => handleAccept(value.rentId)}>Cancel</button></>}
 
-                                                    {value.rentUserNavigation.userStatus != "block" && <><button className="btn btn-outline-danger" onClick={() => handleBlock(value.rentId)}>Block</button></>}
+                                                    {/* {calcDays(value.rentDate,value.rentDuration) && value.rentStatus =="rented" && value.rentUserNavigation.userStatus != "block" && <><button className="btn btn-outline-danger" onClick={() => handleBlock(value.rentId)}>Block</button></>} */}
+
+                                                    { (calcDays(value.rentDate,value.rentDuration) || value.rentStatus =="returned") && (value.rentUserNavigation.userStatus != "block")? <><button className="btn btn-outline-danger" onClick={() => handleBlock(value.rentId)}>Block</button></>:<></>}
                                                 </div>
                                             </td>
-
                                         </tr>
                                     );
                                 })}
                         </tbody>
                     </table>
                 </div>
-
             </div>
         </>
     )
