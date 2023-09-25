@@ -17,6 +17,7 @@ import AdminAgreements from './components/AdminAgreements';
 import AdminCars from './components/AdminCars';
 import AdminAddCars from './components/AdminAddCars';
 import AdminEditCar from './components/AdminEditCar';
+import AdminAgreement from './components/AdminAgreement';
 
 function App() {
   return (
@@ -36,11 +37,8 @@ function App() {
         <Route path="admin/cars" element={<AdminCars />} />
         <Route path="admin/cars/add" element={<AdminAddCars />} />
         <Route path="admin/cars/edit/:id" element={<AdminEditCar />} />
-        {/*<Route path="cart" element={<Cart />} />
-        <Route path="orders" element={<Orders />} />
-        <Route path="admin-products" element={<AdminProducts />} />
-        <Route path="add-product" element={<AddProduct />} />
-      <Route path="edit-product/:pid" element={<EditProduct />} />*/}
+        <Route path="admin/agreement/:id" element={<AdminAgreement />} />
+        
         <Route path="*" element={<NotFound/>} /> 
       </Routes>
       <ToastContainer />

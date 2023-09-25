@@ -72,7 +72,7 @@ const AdminAgreements = () => {
                 }
             });
     }
-    
+
     function handleBlock(val) {
         axios
             .post(
@@ -104,21 +104,21 @@ const AdminAgreements = () => {
             });
     }
 
-    
 
-    function calcDays(day,duration) {
+
+    function calcDays(day, duration) {
         const targetDate = new Date(day);
         const currentDate = new Date();
-        const differenceInMilliseconds = currentDate-targetDate;
+        const differenceInMilliseconds = currentDate - targetDate;
         const daysUntilTargetDate = differenceInMilliseconds / (24 * 60 * 60 * 1000);
-        
+
         const currentDuration = Math.round(daysUntilTargetDate);
-        if(currentDuration>=duration){
+        if (currentDuration >= duration) {
             return true;
         }
         return false;
         // console.log('current duration',currentDuration,'duration',duration );
-        
+
     }
 
     return (
@@ -134,6 +134,7 @@ const AdminAgreements = () => {
                                 <th>Car</th>
                                 <th>User</th>
                                 <th>Status</th>
+                                <th>View</th>
                                 <th className="text-center">Action</th>
                             </tr>
                         </thead>
@@ -146,8 +147,15 @@ const AdminAgreements = () => {
                                                 {index + 1}
                                             </td>
                                             <td>{value.rentCarNavigation && value.rentCarNavigation.carModel} - {value.rentCarNavigation && value.rentCarNavigation.carMaker}</td>
-                                            <td>{value.rentUserNavigation.userName}</td>
+                                            <td>{value.rentUserNavigation.userEmail}</td>
                                             <td>{value.rentStatus}</td>
+                                            <td>
+                                                <Link to={`/admin/agreement/${value.rentId}`}>
+                                                    <button className="btn btn-outline-success">
+                                                        view
+                                                    </button>
+                                                </Link>
+                                            </td>
                                             <td>
                                                 <div className="d-flex gap-3">
                                                     {value.rentStatus == "return" && <><button className="btn btn-outline-success" onClick={() => handleAccept(value.rentId)}>Accept</button></>}
@@ -156,7 +164,7 @@ const AdminAgreements = () => {
 
                                                     {/* {calcDays(value.rentDate,value.rentDuration) && value.rentStatus =="rented" && value.rentUserNavigation.userStatus != "block" && <><button className="btn btn-outline-danger" onClick={() => handleBlock(value.rentId)}>Block</button></>} */}
 
-                                                    { (calcDays(value.rentDate,value.rentDuration) || value.rentStatus =="returned") && (value.rentUserNavigation.userStatus != "block")? <><button className="btn btn-outline-danger" onClick={() => handleBlock(value.rentId)}>Block</button></>:<></>}
+                                                    {(calcDays(value.rentDate, value.rentDuration) || value.rentStatus == "returned") && (value.rentUserNavigation.userStatus != "block") ? <><button className="btn btn-outline-danger" onClick={() => handleBlock(value.rentId)}>Block</button></> : <></>}
                                                 </div>
                                             </td>
                                         </tr>
