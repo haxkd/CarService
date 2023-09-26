@@ -16,12 +16,27 @@ const Agreement = () => {
     }, []);
 
     useEffect(() => {
+        if (rental.rentStatus == "pending") {
         const currentDate = new Date();
         currentDate.setDate(currentDate.getDate() + rental.rentDuration);
         const year = currentDate.getFullYear();
         const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Month is 0-based, so add 1 and pad with 0 if needed
         const day = String(currentDate.getDate()).padStart(2, '0');
         document.getElementById('dateInput').value = `${year}-${month}-${day}`;
+        }
+        else{
+            const originalDate = new Date(rental.rentDate);
+            originalDate.setDate(originalDate.getDate() + rental.rentDuration);
+            // Get the year, month, and day from the original date
+            const year = originalDate.getFullYear();
+            const month = String(originalDate.getMonth() + 1).padStart(2, "0"); // Month is 0-based, so we add 1
+            const day = String(originalDate.getDate()).padStart(2, "0");
+
+            // Create the formatted date string in "yyyy-MM-dd" format
+            const formattedDateString = `${year}-${month}-${day}`;
+
+            document.getElementById('dateInput').value = formattedDateString;
+        }
     }, [rental.rentDuration]);
 
     const loadData = async () => {
@@ -36,7 +51,7 @@ const Agreement = () => {
                 setRental(response.data);
             })
             .catch(function (error) {
-                if (error.response.status == "401") {
+                if (error.code!="ERR_NETWORK" && error.response.status == "401") {
                     setTimeout(() => {
                         navigate("/login");
                     }, 1000);

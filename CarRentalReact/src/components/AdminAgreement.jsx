@@ -16,12 +16,28 @@ const AdminAgreement = () => {
     }, []);
 
     useEffect(() => {
-        const currentDate = new Date();
-        currentDate.setDate(currentDate.getDate() + rental.rentDuration);
-        const year = currentDate.getFullYear();
-        const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Month is 0-based, so add 1 and pad with 0 if needed
-        const day = String(currentDate.getDate()).padStart(2, '0');
-        document.getElementById('dateInput').value = `${year}-${month}-${day}`;
+        if (rental.rentStatus == "pending") {
+            const currentDate = new Date();
+            currentDate.setDate(currentDate.getDate() + rental.rentDuration);
+            const year = currentDate.getFullYear();
+            const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Month is 0-based, so add 1 and pad with 0 if needed
+            const day = String(currentDate.getDate()).padStart(2, '0');
+            document.getElementById('dateInput').value = `${year}-${month}-${day}`;
+        }
+        else {
+            const originalDate = new Date(rental.rentDate);
+            originalDate.setDate(originalDate.getDate() + rental.rentDuration);
+            // Get the year, month, and day from the original date
+            const year = originalDate.getFullYear();
+            const month = String(originalDate.getMonth() + 1).padStart(2, "0"); // Month is 0-based, so we add 1
+            const day = String(originalDate.getDate()).padStart(2, "0");
+
+            // Create the formatted date string in "yyyy-MM-dd" format
+            const formattedDateString = `${year}-${month}-${day}`;
+
+            document.getElementById('dateInput').value = formattedDateString;
+        }
+
     }, [rental.rentDuration]);
 
     const loadData = async () => {
@@ -100,9 +116,9 @@ const AdminAgreement = () => {
     }
 
 
-  return (
-    <>
-        <div className="container p-5">
+    return (
+        <>
+            <div className="container p-5">
                 {rental && (<>
 
                     <div className="p-5 mb-4 bg-body-tertiary rounded-3">
@@ -124,15 +140,15 @@ const AdminAgreement = () => {
                             <p className="col-md-8 fs-4">User Name : {rental.rentUserNavigation && rental.rentUserNavigation.userName}</p>
                             <p className="col-md-8 fs-4">User Email : {rental.rentUserNavigation && rental.rentUserNavigation.userEmail}</p>
                             <hr />
-                           
+
                         </div>
                     </div>
                 </>)}
             </div>
 
 
-    </>
-  )
+        </>
+    )
 }
 
 export default AdminAgreement

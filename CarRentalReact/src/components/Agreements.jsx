@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 const Agreements = () => {
     const navigate = useNavigate();
     let param = useParams();
-    let [rental, setRental] = useState();
+    let [rental, setRental] = useState([]);
 
 
     useEffect(() => {
@@ -27,7 +27,7 @@ const Agreements = () => {
                 setRental(response.data);
             })
             .catch(function (error) {
-                if (error.response.status == "401") {
+                if (error.code!="ERR_NETWORK" && error.response.status == "401") {
                     setTimeout(() => {
                         navigate("/login");
                     }, 1000);
@@ -78,6 +78,11 @@ const Agreements = () => {
                                     );
                                 })}
                         </tbody>
+                        <tfoot>
+                            <tr>
+                            <td colSpan={6}>{rental.length == 0 && <><h1 className="text-center p-5"> Sorry No Agreement Available...!</h1></>}</td>
+                            </tr>
+                        </tfoot>
                     </table>
                 </div>
 

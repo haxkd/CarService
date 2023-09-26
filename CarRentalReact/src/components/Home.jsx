@@ -343,7 +343,7 @@ const Home = () => {
             })}
 
 
-            {cars.length == 0 && <><h1 className="text-center p-5"> Sorry No Cars Avalable...!</h1></>}
+            {cars.length == 0 && <><h1 className="text-center p-5"> Sorry No Cars Available...!</h1></>}
 
 
             <div className="text-center">

@@ -10,7 +10,7 @@ const AdminAgreements = () => {
 
     const navigate = useNavigate();
     let param = useParams();
-    let [rental, setRental] = useState();
+    let [rental, setRental] = useState([]);
 
     useEffect(() => {
         loadData();
@@ -28,14 +28,14 @@ const AdminAgreements = () => {
                 setRental(response.data);
             })
             .catch(function (error) {
-                if (error.response.status == "401") {
-                    setTimeout(() => {
-                        navigate("/admin/login");
-                    }, 1000);
-                    toast.error("Please Login First", {
-                        position: toast.POSITION.TOP_RIGHT,
-                    });
-                    localStorage.removeItem("admin");
+                if(error.code!="ERR_NETWORK" && error.response.status == "401") {
+                        setTimeout(() => {
+                            navigate("/admin/login");
+                        }, 1000);
+                        toast.error("Please Login First", {
+                            position: toast.POSITION.TOP_RIGHT,
+                        });
+                        localStorage.removeItem("admin");
                 }
             });
     }
@@ -112,13 +112,11 @@ const AdminAgreements = () => {
         const differenceInMilliseconds = currentDate - targetDate;
         const daysUntilTargetDate = differenceInMilliseconds / (24 * 60 * 60 * 1000);
 
-        const currentDuration = Math.round(daysUntilTargetDate);
+        const currentDuration = Math.round(daysUntilTargetDate)-1;
         if (currentDuration >= duration) {
             return true;
         }
         return false;
-        // console.log('current duration',currentDuration,'duration',duration );
-
     }
 
     return (
@@ -171,6 +169,11 @@ const AdminAgreements = () => {
                                     );
                                 })}
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colSpan={6}>{rental.length == 0 && <><h1 className="text-center p-5"> Sorry No Agreement Available...!</h1></>}</td>
+                            </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
