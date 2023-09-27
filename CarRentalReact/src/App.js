@@ -22,7 +22,6 @@ import AdminAgreement from './components/AdminAgreement';
 function App() {
   return (
     <>
-    
     <Navbar/>
    
     <Routes>
