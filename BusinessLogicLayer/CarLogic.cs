@@ -17,6 +17,7 @@ namespace BusinessLogicLayer
         {
             _context = dbContext;
         }
+
         public List<Car> GetCars()
         {
             try

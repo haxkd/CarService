@@ -17,6 +17,7 @@ namespace BusinessLogicLayer
         {
             _context = dbContext;
         }
+
         public async Task<User> GetUser(User user)
         {
             return await _context.Users.FirstOrDefaultAsync(u => u.UserEmail == user.UserEmail && u.UserPassword == user.UserPassword && u.IsAdmin != 1);
