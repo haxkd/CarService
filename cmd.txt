@@ -1,0 +1,8 @@
+Scaffold-DbContext "ConnectionString" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Model -Context ApplicationDbContext -DataAnnotations
+
+
+----------------------------------------------------
+
+
+Scaffold-DbContext "ConnectionString" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force -DataAnnotations
+
